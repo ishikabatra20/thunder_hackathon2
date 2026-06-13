@@ -88,31 +88,42 @@ The project is implemented entirely in Python and does not embed any external Ja
 ---
 
 # Repository Structure
-text
-jsrunner/
-├── lexer.py          # Tokenizes JavaScript source
-├── tokens.py         # Token definitions
-├── parser.py         # Pratt parser implementation
-├── ast_nodes.py      # AST node definitions
-├── interpreter.py    # AST evaluator
-├── environment.py    # Variable scopes and closures
-├── stdlib.py         # Built-in JavaScript APIs
-├── runtime.py        # Runtime bootstrap
-├── errors.py         # Custom runtime exceptions
-│
-├── cli.py            # Command-line interface
+
+```text
+JsInterpreter/
+├── jsrunner/
+│   ├── lexer.py
+│   ├── tokens.py
+│   ├── parser.py
+│   ├── ast_nodes.py
+│   ├── interpreter.py
+│   ├── environment.py
+│   ├── stdlib.py
+│   ├── runtime.py
+│   └── errors.py
 │
 ├── tests/
 │   ├── test_cases.py
-│   └── samples/
-│       ├── tc1_odd_even.js
-│       ├── tc2_triangle.js
-│       ├── tc3_armstrong.js
-│       ├── tc4_array_reverse.js
-│       └── tc5_palindrome.js
+│   ├── samples/
+│   │   ├── tc1_odd_even.js
+│   │   ├── tc2_triangle.js
+│   │   ├── tc3_armstrong.js
+│   │   ├── tc4_array_reverse.js
+│   │   └── tc5_palindrome.js
+│   │
+│   └── OtherTestCases/
+│       ├── tc6.js
+│       ├── tc7.js
+│       ├── tc8.js
+│       └── tc9.js
 │
-└── README.md
----
+├── cli.py
+├── pyproject.toml
+├── README.md
+└── image.png
+```
+
+
 # Installation
 
 ## Requirements
@@ -122,17 +133,12 @@ jsrunner/
 ## Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/ishikabatra20/thunder_hackathon2.git
 cd JsInterpreter
 ```
 
 ## Install Dependencies
 
-```bash
-pip install -r requirements.txt
-```
-
-If no requirements file is present:
 
 ```bash
 # No external dependencies required
